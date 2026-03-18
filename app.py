@@ -16,7 +16,8 @@ ticker = st.sidebar.text_input("أدخل كود السهم (مثلاً COMI.CA):
 if ticker:
     try:
         # جلب البيانات
-        data = yf.download(ticker, period="6mo")
+        data = yf.download(ticker, period="1mo",interval="1d")
+
         
         if not data.empty:
             # رسم الشموع اليابانية
